@@ -1,0 +1,37 @@
+
+
+.background {
+    background-color: #fd7e14
+}
+
+.order-container {
+    padding-top: 30px;
+    margin-top: 30px;
+}
+.opacity {
+    opacity: .1;
+}
+
+.order-background {
+    background-color: #0000FF
+}
+
+.small {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2px;
+    border-style: solid
+}
+
+.fill {
+    min-height: 100%;
+    height: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+.rounded-corners {
+    border: 2px solid black;
+    border-radius: 10px;
+}
