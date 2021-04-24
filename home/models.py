@@ -8,7 +8,7 @@ class Order(models.Model):
     order_date = models.DateField()
     pickup_date = models.DateField()
     truck_options = [
-        ("1","United"),
+        ("1", "United"),
         ("2", "Ashley"),
         ("3", "Serta"),
         ("4", "Sealy"),
@@ -44,6 +44,6 @@ class Order(models.Model):
     def __str__(self):
         return self.customer
 
-class OrderForm(ModelForm):
-    class Meta:
-        model = Order
+#class OrderForm(ModelForm):
+ #   class Meta:
+ #       model = Order

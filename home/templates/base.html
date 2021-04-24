@@ -40,7 +40,7 @@
         <div class="container-fluid fill background">
            <nav class="navbar navbar-dark fixed-top bg-dark ">
                 <div class="opacity container-fluid ">
-                    <a class="navbar-brand" href="#">Big Lots 4713 Furniture Orders</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">Big Lots 4713 Furniture Orders</a>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,20 +50,50 @@
                           <a class="nav-link" aria-current="page" href="{% url 'admin:index' %}">Admin</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">List By:</a>
+                          <a class="nav-link active strong" aria-current="page" href="#"><h3>List By:</h3></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Order Date</a>
+                          <a class="nav-link" href="{% url 'home' %}">Order Date</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Pickup Date</a>
+                          <a class="nav-link" href="{% url 'pickup_date' %}">Pickup Date</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Order Type</a>
+                          <a class="nav-link active" href="#"><h5><u>Order Type</u></h5></a>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Truck</a>
+                          <div class="collapse navbar-collapse" id="navbarCollapse">
+                                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                     <li class="nav-item">
+                                         <a class="nav-link" aria-current="page" href="{% url 'by_ph' %}">PH</a>
+                                     </li>
+                                     <li class="nav-item">
+                                         <a class="nav-link" aria-current="page" href="{% url 'by_layaway' %}">Layaway</a>
+                                     </li>
+                                 </ul>
+                              </div>
+                        <li class="nav-item active">
+                          <a class="nav-link active" href="#"><h5><u>Truck</u></h5></a>
                         </li>
+                              <div class="collapse navbar-collapse" id="navbarCollapse">
+                                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                     <li class="nav-item">
+                                         <a class="nav-link" aria-current="page" href="#">Serta</a>
+                                     </li>
+                                     <li class="nav-item">
+                                         <a class="nav-link" aria-current="page" href="#">Sealy</a>
+                                     </li>
+                                     <li class="nav-item">
+                                         <a class="nav-link" aria-current="page" href="#">United</a>
+                                     </li>
+                                     <li class="nav-item">
+                                         <a class="nav-link" aria-current="page" href="#">Ashley</a>
+                                     </li>
+                                     <li class="nav-item">
+                                         <a class="nav-link" aria-current="page" href="#">Freight</a>
+                                     </li>
+                                 </ul>
+                              </div>
+
                       </ul>
                     </div>
                 </div>

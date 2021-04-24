@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<h2>Freight</h2>
+<div class="container-fluid  pt-5 mt-3">
+    <ul class="list-group">
+        {% for order in truck_freight.all %}
+                <div class="rounded-corners background container ">
+                    <li class="list-group-item mb-1 small">
+                        <div class="row">
+                            <div class="col-auto border strong">{{ order.get_order_type_display }}</div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-auto border">{{ order.customer }}</div>
+                            <div class="col-auto border">Ord Date {{ order.order_date_pretty }}</div>
+                            <!--<div class="col-auto">Reserved{{ order.order_isreserved }}</div>-->
+                        </div>
+                        <div class="row">
+                            <div class="col-auto border">{{ order.items }}</div>
+                            <div class="col-auto border">{{ order.pickup_date_pretty }}</div>
+                            <div class="col-auto border">{{ order.get_truck_display }}</div>
+                        </div>
+                    </li>
+                </div>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

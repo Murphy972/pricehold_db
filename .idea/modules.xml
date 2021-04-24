@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Django_Portfolio-main/.idea/Django_Portfolio-main.iml" filepath="$PROJECT_DIR$/../Django_Portfolio-main/.idea/Django_Portfolio-main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/priceholddatabase.iml" filepath="$PROJECT_DIR$/.idea/priceholddatabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../producthuntclone/.idea/producthuntclone.iml" filepath="$PROJECT_DIR$/../producthuntclone/.idea/producthuntclone.iml" />
     </modules>
   </component>
 </project>
