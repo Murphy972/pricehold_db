@@ -8,19 +8,19 @@ class Order(models.Model):
     order_date = models.DateField()
     pickup_date = models.DateField()
     truck_options = [
-        ("1", "United"),
-        ("2", "Ashley"),
-        ("3", "Serta"),
-        ("4", "Sealy"),
-        ("5", "Freight"),
+        ('united', "United"),
+        ('ashley', "Ashley"),
+        ('serta', "Serta"),
+        ('sealy', "Sealy"),
+        ('freight', "Freight"),
     ]
     truck = models.CharField(
         max_length=100,
         choices=truck_options
     )
     order_types = [
-        ("1", "PH"),
-        ("2", "Layaway")
+        ("ph", "PH"),
+        ("layaway", "Layaway")
     ]
     order_type = models.CharField(
         max_length=100,
