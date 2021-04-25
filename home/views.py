@@ -1,12 +1,17 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 from .models import Order
-
+from .forms import *
 
 def home(request):
     orders = Order.objects.filter(order_isreserved=False)
     order_date = orders.order_by('order_date')
-    return render(request, 'home.html', {'order_date': order_date})
+    form = OrderForm()
+    if request.method == 'Post':
+        form = OrderForm(request.Post)
+        if form.is_valid():
+            form.save()
+    return render(request, 'home.html', {'order_date': order_date}, {'form': form})
 
 
 def by_pickup(request):

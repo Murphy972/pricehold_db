@@ -27,6 +27,7 @@ class Order(models.Model):
         choices=order_types,
     )
     order_isreserved = models.BooleanField()
+    order_ismarked = models.BooleanField(default=False)
 
     def sort_by_od(self):
         return self
