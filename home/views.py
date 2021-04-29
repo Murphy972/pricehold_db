@@ -1,17 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Order
 from .forms import *
+from django.db.models import Q
 
-def home(request):
+def edit_orders(request, pk):
+
+    order = Order.objects.get(id=pk)
+    form = OrderForm(instance=order)
+
+    return render(request, 'createorder.html', {'form': form})
+
+def home(request, *args, **kwargs):
     orders = Order.objects.filter(order_isreserved=False)
     order_date = orders.order_by('order_date')
-    form = OrderForm()
-    if request.method == 'Post':
-        form = OrderForm(request.Post)
-        if form.is_valid():
-            form.save()
-    return render(request, 'home.html', {'order_date': order_date}, {'form': form})
+    return render(request, 'home.html', {'order_date': order_date})
 
 
 def by_pickup(request):

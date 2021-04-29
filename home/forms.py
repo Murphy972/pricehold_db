@@ -1,4 +1,4 @@
-from django
+
 from django.forms import ModelForm
 from .models import Order
 
@@ -6,4 +6,4 @@ from .models import Order
 class OrderForm(ModelForm):
     class Meta:
         model = Order
-        fields = ['order_isreserved', 'order_ismarked']
+        fields = ('order_isreserved', 'order_ismarked')

@@ -1,12 +1,13 @@
 from django.db import models
 from django.forms import ModelForm
+from datetime import datetime
 
 
 class Order(models.Model):
-    customer = models.CharField(max_length=20)
-    items = models.CharField(max_length=100)
-    order_date = models.DateField()
-    pickup_date = models.DateField()
+    customer = models.CharField(max_length=20, blank=True)
+    items = models.CharField(max_length=100, blank=True)
+    order_date = models.DateField(blank=True)
+    pickup_date = models.DateField(blank=True)
     truck_options = [
         ('united', "United"),
         ('ashley', "Ashley"),
@@ -16,7 +17,8 @@ class Order(models.Model):
     ]
     truck = models.CharField(
         max_length=100,
-        choices=truck_options
+        choices=truck_options,
+        blank=True
     )
     order_types = [
         ("ph", "PH"),
@@ -25,9 +27,11 @@ class Order(models.Model):
     order_type = models.CharField(
         max_length=100,
         choices=order_types,
+        blank=True
     )
-    order_isreserved = models.BooleanField()
-    order_ismarked = models.BooleanField(default=False)
+    order_isreserved = models.BooleanField(default=False, blank=True)
+    order_ismarked = models.BooleanField(default=False, blank=True)
+
 
     def sort_by_od(self):
         return self
@@ -44,6 +48,9 @@ class Order(models.Model):
 
     def __str__(self):
         return self.customer
+
+    def id(self):
+        return self.id
 
 #class OrderForm(ModelForm):
  #   class Meta:

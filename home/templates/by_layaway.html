@@ -1,28 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<br/>
-<br/>
-<br/>
-<h2>Price Holds:</h2>
-<div class="container-fluid  pt-5 mt-3">
+<div class="container-fluid pt-5 mt-3">
+    <br/>
+    <br/>
+    <div class="container card">
+        <div class="offset-3"><h2>Layaways</h2></div>
+    </div>
+    <br/>
     <ul class="list-group">
         {% for order in layaway_orders.all %}
-                <div class="rounded-corners background container ">
-                    <li class="list-group-item mb-1 small">
+                <div class="order_item">
+                    <li class="order_item list-group-item mb-1 small order">
                         <div class="row">
-                            <div class="col-auto border strong">{{ order.get_order_type_display }}</div>
+                            <div class="col-auto  strong">{{ order.get_order_type_display }})</div>
+                            <div class="col-auto">{{ order.customer }}</div>
+                            <input class="btn col-auto" type="checkbox">
                         </div>
                         <hr/>
                         <div class="row">
-                            <div class="col-auto border">{{ order.customer }}</div>
-                            <div class="col-auto border">Ord Date {{ order.order_date_pretty }}</div>
-                            <!--<div class="col-auto">Reserved{{ order.order_isreserved }}</div>-->
+                            <div class="col-auto ">Order Date: {{ order.order_date_pretty }}</div>
+                            <div class="col-auto ">Pickup Date: {{ order.pickup_date_pretty }}</div>
                         </div>
                         <div class="row">
-                            <div class="col-auto border">{{ order.items }}</div>
-                            <div class="col-auto border">{{ order.pickup_date_pretty }}</div>
-                            <div class="col-auto border">{{ order.get_truck_display }}</div>
+                            <div class="col-auto strong">{{ order.items }}</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-auto">{{ order.get_truck_display }}</div>
                         </div>
                     </li>
                 </div>
