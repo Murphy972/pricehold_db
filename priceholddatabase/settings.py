@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'priceholddatabase.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'priceholddb',
         'USER': 'postgres',
         'PASSWORD': 'Sherrytaco1',
         'Host': 'localhost',
