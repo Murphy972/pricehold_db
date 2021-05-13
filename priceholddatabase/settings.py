@@ -74,17 +74,6 @@ WSGI_APPLICATION = 'priceholddatabase.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'priceholddb',
-        'USER': 'postgres',
-        'PASSWORD': 'Sherrytaco1',
-        'Host': 'localhost',
-        'Port': ''
-
-    }
-}
 
 
 # Password validation
@@ -124,10 +113,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'priceholddatabase/static/')
+    os.path.join(BASE_DIR, 'static/')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, '../home/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '../pricehold_db/static')
 
 STATIC_URL = '/static/'
 
@@ -136,6 +125,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
