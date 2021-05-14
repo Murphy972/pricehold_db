@@ -53,50 +53,35 @@
                         <li class="nav-item">
                           <a class="nav-link" aria-current="page" href="{% url 'admin:index' %}">Admin</a>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link active strong" aria-current="page" href="#"><h3>List By:</h3></a>
+                            <li class="nav-item">
+                              <a class="nav-link active strong" aria-current="page" href="#"><h3>List By:</h3></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link col-auto" href="{% url 'home' %}">Order Date</a>
+                              <a class="nav-link col-auto" href="{% url 'pickup_date' %}">Pickup Date</a>
+                            </li>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="{% url 'home' %}">Order Date</a>
+
+                        <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle dropdown-header active" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Order Type</a>
+                              <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                                         <li><a class="dropdown-item" aria-current="page" href="{% url 'by_ph' %}">PH</a></li>
+                                         <li><a class="dropdown-item" aria-current="page" href="{% url 'by_layaway' %}">Layaway</a></li>
+                                     </ul>
+                              </ul>
                         </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="{% url 'pickup_date' %}">Pickup Date</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" href="#"><h5><u>Order Type</u></h5></a>
-                        </li>
-                          <div class="collapse navbar-collapse" id="navbarCollapse">
-                                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                                     <li class="nav-item">
-                                         <a class="nav-link" aria-current="page" href="{% url 'by_ph' %}">PH</a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" aria-current="page" href="{% url 'by_layaway' %}">Layaway</a>
-                                     </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle dropdown-header active" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Truck</a>
+                                 <ul class="dropdown-menu">
+                                     <li><a class="dropdown-item" aria-current="page" href="{% url 'truck_serta' %}">Serta</a></li>
+                                     <li><a class="dropdown-item" aria-current="page" href="{% url 'truck_sealy' %}">Sealy</a></li>
+                                     <li><a class="dropdown-item" aria-current="page" href="{% url 'truck_united' %}">United</a></li>
+                                     <li><a class="dropdown-item" aria-current="page" href="{% url 'truck_ashley' %}">Ashley</a></li>
+                                     <li><a class="dropdown-item" aria-current="page" href="{% url 'truck_freight' %}">Freight</a></li>
                                  </ul>
-                              </div>
-                        <li class="nav-item active">
-                          <a class="nav-link active" href="#"><h5><u>Truck</u></h5></a>
                         </li>
-                              <div class="collapse navbar-collapse" id="navbarCollapse">
-                                 <ul class="navbar-nav me-auto pb-3 mb-md-0">
-                                     <li class="nav-item">
-                                         <a class="nav-link" aria-current="page" href="{% url 'truck_serta' %}">Serta</a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" aria-current="page" href="{% url 'truck_sealy' %}">Sealy</a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" aria-current="page" href="{% url 'truck_united' %}">United</a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" aria-current="page" href="{% url 'truck_ashley' %}">Ashley</a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" aria-current="page" href="{% url 'truck_freight' %}">Freight</a>
-                                     </li>
-                                 </ul>
-                              </div>
 
                       </ul>
                     </div>
