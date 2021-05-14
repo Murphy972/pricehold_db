@@ -54,3 +54,19 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.short-nav: {
+    display: none;
+}
+
+.full-nav {}
+
+@media (max-width: 320px) {
+    .short-nav { display: inline-block; }
+    .full-nav { display: none; }
+}
+
+@media (min-width: 321px) {
+    .short-nav { display: none; }
+    .full-nav { display: inline-block; }
+}
