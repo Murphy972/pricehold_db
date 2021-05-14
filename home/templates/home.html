@@ -1,20 +1,18 @@
-
 {% extends 'base.html' %}
 
 {% block content %}
 <div class="container-fluid pt-5 mt-3">
     <br/>
-    <br/>
-    <div class="container card">
+    <div class="title card">
         <div class="offset-3"><h2>By Order Date</h2></div>
     </div>
     <br/>
     <ul class="list-group">
         {% for order in order_date.all %}
-                <div class="order_item">
-                    <li class="order_item list-group-item mb-1 small order">
+                <div>
+                    <li class="order_item list-group-item small">
                         <div class="row">
-                            <div class="col-auto  strong">{{ order.get_order_type_display }})</div>
+                            <div class="col-auto">{{ order.get_order_type_display }})</div>
                             <div class="col-auto">{{ order.customer }}</div>
                             <input class="btn col-auto" type="checkbox">
                         </div>
@@ -26,7 +24,6 @@
                         <div class="row">
                             <div class="col-auto strong">{{ order.items }}</div>
                         </div>
-
                         <div class="row">
                             <div class="col-auto">{{ order.get_truck_display }}</div>
                         </div>

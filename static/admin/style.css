@@ -1,5 +1,5 @@
 
-
+/*
 .background {
     background-color: #fd7e14;
     height: 100vh;
@@ -14,12 +14,13 @@
 }
 
 .order_item {
+    padding-left: 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding-left: 20px !important;
-    background-color: #FFE4C4 !important;
+    padding-left: 20px;
+    background-color: #FFF8DC;
 }
 
 .border {
@@ -27,6 +28,6 @@
 }
 
 .list-group-guy {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 20px;
+    padding-right: 20px;
 }

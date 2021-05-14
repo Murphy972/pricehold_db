@@ -73,7 +73,16 @@ WSGI_APPLICATION = 'priceholddatabase.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'priceholddb',
+        'USER': 'postgres',
+        'PASSWORD': 'Sherrytaco1',
+        'HOST': 'localhost',
+        'PORT': '5431',
+    }
+}
 
 
 # Password validation
