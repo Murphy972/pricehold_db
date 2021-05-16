@@ -17,6 +17,7 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    box-shadow: 0px 3px 3px
 }
 
 .background {
@@ -42,6 +43,7 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    box-shadow: -4px 3px 3px
 }
 
 
