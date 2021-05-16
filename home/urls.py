@@ -14,6 +14,7 @@ urlpatterns = [
     path('truck-united', views.truck_united, name='truck_united'),
     path('truck-ashley', views.truck_ashley, name='truck_ashley'),
     path('truck-freight', views.truck_freight, name='truck_freight'),
+    path('order-view', views.order_view, name='order_view'),
 
     #path('createorder', views.createorder, name='createorder')
 ]

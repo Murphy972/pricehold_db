@@ -71,3 +71,6 @@ def truck_freight(request):
     truck_freight = order_date.filter(truck='freight')
     return render(request, 'freight.html', {'truck_freight': truck_freight})
 
+def order_view(request):
+    return render(request, 'order_view.html', {'order_view': order_view})
+
