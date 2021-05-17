@@ -6,7 +6,7 @@ from datetime import datetime
 class Order(models.Model):
     customer = models.CharField(max_length=20, blank=True)
     items = models.CharField(max_length=100, blank=True)
-    order_date = models.DateField(blank=True)
+    order_date = models.DateTimeField(blank=True)
     pickup_date = models.DateField(blank=True)
     truck_options = [
         ('united', "United"),
@@ -41,7 +41,7 @@ class Order(models.Model):
         super(Order, self).save(*args, **kwargs)
 
     def order_date_pretty(self):
-        return self.order_date.strftime('%x')
+        return self.order_date.strftime('%x %H:%M')
 
     def pickup_date_pretty(self):
         return self.pickup_date.strftime('%x')
