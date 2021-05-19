@@ -79,11 +79,12 @@ def order_view(request, pk):
     order = Order.objects.get(id=pk)
     form = OrderForm(instance=order)
 
-    if request.method =='POST':
+    if request.method == 'POST':
         form = OrderForm(request.POST, instance=order)
         if form.is_valid():
             form.save()
             return redirect('/')
+
 
     context = {'form': form}
     return render(request, 'order_view.html', context)

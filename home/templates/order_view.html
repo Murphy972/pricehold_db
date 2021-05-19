@@ -9,7 +9,9 @@
     <br/>
     <form sction="" method="POST">
         {% csrf_token %}
-        {{form}}
+        <div class="form-group">
+            {{form}}
+        </div>
         <input type="submit">
     </form>
 </div>
