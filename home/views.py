@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Order
 from .forms import *
 from django.db.models import Q
+
 
 def edit_orders(request, pk):
 
@@ -10,6 +11,7 @@ def edit_orders(request, pk):
     form = OrderForm(instance=order)
 
     return render(request, 'createorder.html', {'form': form})
+
 
 def home(request, *args, **kwargs):
     orders = Order.objects.filter(order_isreserved=False)
@@ -71,6 +73,18 @@ def truck_freight(request):
     truck_freight = order_date.filter(truck='freight')
     return render(request, 'freight.html', {'truck_freight': truck_freight})
 
-def order_view(request):
-    return render(request, 'order_view.html', {'order_view': order_view})
+
+def order_view(request, pk):
+
+    order = Order.objects.get(id=pk)
+    form = OrderForm(instance=order)
+
+    if request.method =='POST':
+        form = OrderForm(request.POST, instance=order)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {'form': form}
+    return render(request, 'order_view.html', context)
 

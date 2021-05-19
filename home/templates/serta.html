@@ -13,8 +13,9 @@
                     <li class="order_item list-group-item small">
                         <div class="row">
                             <div class="col-auto">{{ order.get_order_type_display }})</div>
-                            <div class="col-auto">{{ order.customer }}</div>
                             <input class="btn col-auto" type="checkbox">
+                            <div class="col-auto">{{ order.customer }}</div>
+                            <a class="col-auto edit-button" href="{% url 'order_view' order.id %}" type="button">edit</a>
                         </div>
                         <hr/>
                         <div class="row">
