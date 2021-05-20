@@ -49,7 +49,3 @@ class Order(models.Model):
 
     def id(self):
         return self.id
-
-#class OrderForm(ModelForm):
- #   class Meta:
- #       model = Order

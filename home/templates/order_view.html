@@ -7,13 +7,17 @@
         <div class="offset-3"><h2>Order view</h2></div>
     </div>
     <br/>
-    <form sction="" method="POST">
-        {% csrf_token %}
-        <div class="form-group">
-            {{form}}
+        <div class="container order-view-container">
+            <div class="form-group">
+                <form section="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{form}}
+                    </div>
+                    <input type="submit">
+                </form>
+            </div>
         </div>
-        <input type="submit">
-    </form>
 </div>
 
 {% endblock %}
