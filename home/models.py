@@ -29,7 +29,7 @@ class Order(models.Model):
         choices=order_types,
         blank=True
     )
-    order_isreserved = models.BooleanField(default=False, blank=True)
+    order_isreserved = models.BooleanField(default=False, blank=True, null=True)
 
     def sort_by_od(self):
         return self

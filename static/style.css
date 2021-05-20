@@ -85,9 +85,11 @@ body {
 @media (max-width: 320px) {
     .short-nav { display: inline-block; }
     .full-nav { display: none; }
+    .edit-button { font-size: 80%}
 }
 
 @media (min-width: 321px) {
     .short-nav { display: none; }
     .full-nav { display: inline-block; }
+    .edit-button { font-size: 100%}
 }
