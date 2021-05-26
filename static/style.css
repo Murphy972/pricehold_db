@@ -9,7 +9,6 @@ body {
     position: absolute;
 }
 
-
 .title {
     margin-left: 20px;
     margin-right: 20px;
@@ -27,23 +26,20 @@ body {
 
 .container-fluid {
     padding: 0px ;
-    height: 100% !important;
 }
 
 .list-group-item {
     margin-left: 7px;
     margin-bottom: 6px;
     padding-left: 5px;
-    border-top-left-radius: 10px !important;
-   /* border-top-right-radius: 10px; */
-    border-bottom-left-radius: 10px !important;
-    /*border-bottom-right-radius: 10px; */
     padding-left: 20px;
     background-color: #FFF8DC;
     border-style: solid;
     border-width: 1px;
     border-color: black;
     box-shadow: -4px 3px 3px
+
+
 }
 
 
@@ -82,6 +78,34 @@ body {
 
 .full-nav {}
 
+#list-item {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out
+}
+
+#title {
+    animation: fadeIn 1s;
+}
+
+#nav-bar {
+    animation: dropDown 1s;
+}
+
+#top-of-page {
+    text-decoration: none;
+    color: inherit;
+}
+
+#bottom-of-page {
+    text-decoration: none;
+    opacity: 0;
+}
+
+
 @media (max-width: 320px) {
     .short-nav { display: inline-block; }
     .full-nav { display: none; }
@@ -92,4 +116,68 @@ body {
     .short-nav { display: none; }
     .full-nav { display: inline-block; }
     .edit-button { font-size: 100%}
+}
+
+@media (min-width: 450px) {
+    .list-group-item {
+        margin-bottom: 8px;
+        margin-left: 9px;
+        margin-right: 9px;
+        padding-right: 5px;
+        padding-left: 20px;
+        box-shadow: 0px 3px 3px
+    }
+
+    #list-item {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+
+    100% {
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dropDown {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
 }
