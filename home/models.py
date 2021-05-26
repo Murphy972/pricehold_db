@@ -29,12 +29,12 @@ class Order(models.Model):
         choices=order_types,
         blank=True
     )
-<<<<<<< HEAD
+
     order_isreserved = models.BooleanField(default=False, blank=True, null=True)
-=======
+
     order_isreserved = models.BooleanField(default=False, blank=True)
     order_ismarked = models.BooleanField(default=False, blank=True)
->>>>>>> development
+
 
     def sort_by_od(self):
         return self
