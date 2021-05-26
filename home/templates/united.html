@@ -3,14 +3,14 @@
 {% block content %}
 <div class="container-fluid pt-5 mt-3">
     <br/>
-    <div class="title card">
-        <div class="offset-3"><h2>United</h2></div>
+    <div class="title card" id="title">
+        <div class="mx-auto"><h2><a id="top-of-page" href="#bottom-of-page">United</a></h2></div>
     </div>
     <br/>
     <ul class="list-group">
         {% for order in truck_united.all %}
                 <div>
-                    <li class="order_item list-group-item small">
+                    <li class="order_item list-group-item small" id="list-item">
                         <div class="row">
                             <div class="col-auto">{{ order.get_order_type_display }})</div>
                             <input class="btn col-auto" type="checkbox">
@@ -32,5 +32,6 @@
                 </div>
         {% endfor %}
     </ul>
+    <a id="bottom-of-page" href="#top-of-page">Bottom of the page this is the bottom</a>
 </div>
 {% endblock %}

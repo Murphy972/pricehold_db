@@ -30,6 +30,7 @@ class Order(models.Model):
         blank=True
     )
     order_isreserved = models.BooleanField(default=False, blank=True)
+    order_ismarked = models.BooleanField(default=False, blank=True)
 
     def sort_by_od(self):
         return self
